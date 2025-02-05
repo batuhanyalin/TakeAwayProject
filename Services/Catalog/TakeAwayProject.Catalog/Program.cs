@@ -1,6 +1,29 @@
+using Microsoft.Extensions.Options;
+using System.Reflection;
+using TakeAwayProject.Catalog.Services.CategoryServices;
+using TakeAwayProject.Catalog.Services.FeatureServices;
+using TakeAwayProject.Catalog.Services.ProductServices;
+using TakeAwayProject.Catalog.Services.SliderServices;
+using TakeAwayProject.Catalog.Settings;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IFeatureService, FeatureService>();
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+//MongoDb Registration
+builder.Services.Configure<DatabaseSettings>
+    (builder.Configuration.GetSection("DatabaseSettings"));
+builder.Services.AddScoped<IDatabaseSettings>(sp =>
+{
+    return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

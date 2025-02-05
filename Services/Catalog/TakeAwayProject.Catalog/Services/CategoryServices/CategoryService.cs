@@ -8,10 +8,12 @@ namespace TakeAwayProject.Catalog.Services.CategoryServices
 {
     public class CategoryService : ICategoryService
     {
+
         private readonly IMongoCollection<Category> _categoryCollection;
         private readonly IMapper _mapper;
 
         public CategoryService(IDatabaseSettings _databaseSettings, IMapper mapper)
+        
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
@@ -29,6 +31,7 @@ namespace TakeAwayProject.Catalog.Services.CategoryServices
         {
             await _categoryCollection.DeleteOneAsync(id);
         }
+
         public async Task<List<ResultCategoryDto>> GetAllCategoryAsync()
         {
             var values = await _categoryCollection.Find(x => true).ToListAsync();
