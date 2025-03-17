@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{A676
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAwayProject.Catalog", "Services\Catalog\TakeAwayProject.Catalog\TakeAwayProject.Catalog.csproj", "{48A73DE7-49A1-4A6C-8283-A0D7519E793E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{A314C5FD-95BA-4741-A390-D9B6FCCC53A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A676BAD3-245C-4D71-9D0F-84BB5669FA5A} = {75826C78-1F82-4EDE-97BB-CE0581C97726}
 		{48A73DE7-49A1-4A6C-8283-A0D7519E793E} = {A676BAD3-245C-4D71-9D0F-84BB5669FA5A}
+		{A314C5FD-95BA-4741-A390-D9B6FCCC53A7} = {75826C78-1F82-4EDE-97BB-CE0581C97726}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BEC40886-6C85-453B-984A-DCAF160BC0DE}
