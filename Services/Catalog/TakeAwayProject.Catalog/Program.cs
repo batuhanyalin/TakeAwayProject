@@ -18,8 +18,8 @@ builder.Services.AddScoped<IFeatureService, FeatureService>();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 //MongoDb Registration
-builder.Services.Configure<DatabaseSettings>
-    (builder.Configuration.GetSection("DatabaseSettings"));
+builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
+
 builder.Services.AddScoped<IDatabaseSettings>(sp =>
 {
     return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
