@@ -1,6 +1,11 @@
+using TakeAwayProject.Discount.Context;
+using TakeAwayProject.Discount.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddScoped<DapperContext>();
+builder.Services.AddScoped<IDiscountCouponService, DiscountCouponService>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
