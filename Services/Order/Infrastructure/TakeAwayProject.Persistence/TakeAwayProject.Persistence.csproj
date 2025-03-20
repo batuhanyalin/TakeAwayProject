@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TakeAwayProject.Application\TakeAwayProject.Application.csproj" />
+    <ProjectReference Include="..\..\Core\TakeAwayProject.Domain\TakeAwayProject.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
