@@ -22,7 +22,7 @@ namespace TakeAwayProject.Application.Features.Mediator.Handlers.OrderingHandler
 
         public async Task Handle(RemoveOrderingCommand request, CancellationToken cancellationToken)
         {
-            await _repository.DeleteAsync(request.Id);
+            await _repository.DeleteAsync(request.Id);  
         }
     }
 }
