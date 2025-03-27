@@ -12,7 +12,7 @@ using TakeAwayNight.IdentityServer.Data;
 namespace TakeAwayNight.IdentityServer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240723202703_mig1")]
+    [Migration("20250327140431_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
