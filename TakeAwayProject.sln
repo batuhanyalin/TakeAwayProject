@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAwayProject.OrderApi", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAwayNight.IdentityServer", "IdentityServer\TakeAwayNight.IdentityServer\TakeAwayNight.IdentityServer.csproj", "{9D88C37B-BABA-4C56-8D52-7114B16A4A78}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAwayProject.Basket", "Services\Basket\TakeAwayProject.Basket\TakeAwayProject.Basket.csproj", "{164EA073-3FFC-4524-B5B8-90330DA84F09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,10 @@ Global
 		{9D88C37B-BABA-4C56-8D52-7114B16A4A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D88C37B-BABA-4C56-8D52-7114B16A4A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D88C37B-BABA-4C56-8D52-7114B16A4A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164EA073-3FFC-4524-B5B8-90330DA84F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164EA073-3FFC-4524-B5B8-90330DA84F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164EA073-3FFC-4524-B5B8-90330DA84F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164EA073-3FFC-4524-B5B8-90330DA84F09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +97,8 @@ Global
 		{7F4CDA7B-08A4-4B44-B028-B9A594EA355A} = {BB5CAAD7-80AB-4997-A01B-348682778B36}
 		{0AB63336-CD7C-44DC-8720-EC4CE7F4AE92} = {FC98F48F-A02D-400D-89E9-6E4362006239}
 		{9D88C37B-BABA-4C56-8D52-7114B16A4A78} = {42CF99D4-0E89-4475-97B7-E4CD7F546E90}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {75826C78-1F82-4EDE-97BB-CE0581C97726}
+		{164EA073-3FFC-4524-B5B8-90330DA84F09} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BEC40886-6C85-453B-984A-DCAF160BC0DE}
