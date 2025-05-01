@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using System.Reflection;
 using TakeAwayProject.Catalog.Services.CategoryServices;
@@ -10,6 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//Jwt bearer keyi
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.Authority = builder.Configuration["IdentityServerUrl"]; //Yetkinin nereden geleceðini belirtiyoruz.
+    opt.Audience = ""; //Microservice hangi
+    opt.RequireHttpsMetadata = false;
+});
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();

@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TakeAway.WebUI.Services.CatalogServices.ProductServices;
 
 namespace TakeAway.WebUI.Controllers
 {
     public class DefaultController : Controller
     {
-        public IActionResult Index()
+        private readonly IProductService _productService;
+
+        public DefaultController(IProductService productService)
         {
-            return View();
+            _productService = productService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var values = await _productService.GetAllProductsAsync();
+            return View(values);
         }
     }
 }

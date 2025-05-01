@@ -1,12 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-  
+<html lang="en"> 
 <head>
      @await Component.InvokeAsync("_UIHeadComponentPartial")
 </head>
-
 <body>
-
     <!-- Spinner Start -->
     <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
@@ -36,11 +33,11 @@
     </div>
     <!-- Hero End -->
     <!-- Featurs Section Start -->
-    @RenderBody()
     @await Component.InvokeAsync("_UIFeaturesComponentPartial")
     <!-- Featurs Section End -->
     <!-- Fruits Shop Start-->
-    @await Component.InvokeAsync("_UIOurOrganicProductsComponentPartial")
+    @RenderBody()
+   @*  @await Component.InvokeAsync("_UIOurOrganicProductsComponentPartial") *@
     <!-- Fruits Shop End-->
     <!-- Featurs Start -->
     @await Component.InvokeAsync("_UI3CardsComponentPartial")
@@ -70,5 +67,4 @@
     <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
     @await Component.InvokeAsync("_UIScriptsComponentPartial")
 </body>
-
 </html>
