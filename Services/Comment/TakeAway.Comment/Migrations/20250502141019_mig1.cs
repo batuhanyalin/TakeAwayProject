@@ -11,10 +11,10 @@ namespace TakeAway.Comment.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "UserCommands",
+                name: "UserComments",
                 columns: table => new
                 {
-                    UserCommandId = table.Column<int>(type: "integer", nullable: false)
+                    UserCommentId = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     NameSurname = table.Column<string>(type: "text", nullable: false),
                     UserId = table.Column<string>(type: "text", nullable: false),
@@ -25,14 +25,14 @@ namespace TakeAway.Comment.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserCommands", x => x.UserCommandId);
+                    table.PrimaryKey("PK_UserComments", x => x.UserCommentId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "UserCommands");
+                name: "UserComments");
         }
     }
 }

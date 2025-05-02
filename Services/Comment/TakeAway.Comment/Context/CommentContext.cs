@@ -9,6 +9,6 @@ namespace TakeAway.Comment.Context
         {
             
         }
-        public DbSet<UserCommand> UserCommands { get; set; }
+        public DbSet<UserComment> UserComments { get; set; }
     }
 }

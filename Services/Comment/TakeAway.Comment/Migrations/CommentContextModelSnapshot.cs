@@ -22,13 +22,13 @@ namespace TakeAway.Comment.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("TakeAway.Comment.Entities.UserCommand", b =>
+            modelBuilder.Entity("TakeAway.Comment.Entities.UserComment", b =>
                 {
-                    b.Property<int>("UserCommandId")
+                    b.Property<int>("UserCommentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserCommandId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserCommentId"));
 
                     b.Property<string>("CommentDetail")
                         .IsRequired()
@@ -52,9 +52,9 @@ namespace TakeAway.Comment.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("UserCommandId");
+                    b.HasKey("UserCommentId");
 
-                    b.ToTable("UserCommands");
+                    b.ToTable("UserComments");
                 });
 #pragma warning restore 612, 618
         }
