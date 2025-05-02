@@ -15,7 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 {
     opt.Authority = builder.Configuration["IdentityServerUrl"]; //Yetkinin nereden geleceðini belirtiyoruz.
-    opt.Audience = ""; //Microservice hangi
+    opt.Audience = "ResourceCatalog"; //Identity configdeki allowedScopes bölümünden geliyor.
     opt.RequireHttpsMetadata = false;
 });
 builder.Services.AddScoped<ISliderService, SliderService>();
@@ -48,6 +48,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

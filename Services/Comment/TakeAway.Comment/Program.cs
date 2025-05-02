@@ -1,4 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using TakeAway.Comment.Context;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+//postgresql baðlantý konfigürasyonu
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<CommentContext>(x =>
+{
+    x.UseNpgsql(connectionString);
+});
 
 // Add services to the container.
 
